@@ -1,4 +1,4 @@
-package org.bot
+package org.bot.home_work_1
 
 fun interface QuadraticSolver {
 

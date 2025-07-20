@@ -1,4 +1,6 @@
-import org.bot.QuadraticSolver
+package home_work_1
+
+import org.bot.home_work_1.QuadraticSolver
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 import kotlin.math.abs

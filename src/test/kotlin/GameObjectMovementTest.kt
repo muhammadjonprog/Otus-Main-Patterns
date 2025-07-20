@@ -27,13 +27,13 @@ class GameObjectMovementTest {
             Mover().move(obj)
         }
 
-        assertEquals("Position is not readable", exception.message)
+        assertEquals("Position not readable", exception.message)
     }
 
     // 3. Ошибка — невозможно прочитать скорость
     class BrokenMovableNoVelocity : Movable {
         override fun getPosition(): Vector2D = Vector2D(0.0, 0.0)
-        override fun getVelocity(): Vector2D = throw IllegalStateException("Velocity not readable")
+        override fun getVelocity(): Vector2D = throw IllegalStateException("Velocity is not readable")
         override fun setPosition(newPosition: Vector2D) {}
     }
 

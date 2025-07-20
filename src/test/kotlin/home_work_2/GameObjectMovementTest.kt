@@ -1,4 +1,5 @@
-import home_work_2.*
+package home_work_2
+
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.Test

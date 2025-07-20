@@ -26,6 +26,7 @@ class GameObjectMovementTest {
         val exception = assertThrows(IllegalStateException::class.java) {
             Mover().move(obj)
         }
+
         assertEquals("Position is not readable", exception.message)
     }
 

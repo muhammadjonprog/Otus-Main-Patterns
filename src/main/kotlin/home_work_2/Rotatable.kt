@@ -5,4 +5,5 @@ interface Rotatable {
     fun getDirectionAngle(): Double // в градусах или радианах
 
     fun setDirectionAngle(angle: Double)
+
 }

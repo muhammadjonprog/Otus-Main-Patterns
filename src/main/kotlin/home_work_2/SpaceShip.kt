@@ -10,6 +10,10 @@ class SpaceShip(
 
     override fun getVelocity(): Vector2D = velocity
 
+    override fun setVelocity(velocity: Vector2D) {
+        this.velocity = velocity
+    }
+
     override fun setPosition(newPosition: Vector2D) {
         this.position = newPosition
     }

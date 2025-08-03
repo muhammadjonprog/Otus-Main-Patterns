@@ -6,6 +6,8 @@ interface Movable {
 
     fun getVelocity(): Vector2D
 
+    fun setVelocity(velocity: Vector2D){}
+
     fun setPosition(newPosition: Vector2D)
 
 }

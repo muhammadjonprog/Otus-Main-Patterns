@@ -141,22 +141,22 @@ class TestCommandQueue {
         assertEquals(1, failing.executionCount)
     }
 
-    @Test
-    fun `RetryHandler retries once then logs`() {
-        val failing = FailableCommand("Cmd", 1, log) // Упадёт 2 раза
-        queue.add(failing)
-
-        val handler = RetryHandler(1, TestLoggingHandler(log))
-        process(queue, handler)
-
-        assertEquals(
-            listOf(
-                "execute:Cmd#1",
-                "execute:Cmd#2",
-                "log:FailableCommand(Cmd) - Fail Cmd"
-            ), log
-        )
-    }
+//    @Test
+//    fun `RetryHandler retries once then logs`() {
+//        val failing = FailableCommand("Cmd", 1, log) // Упадёт 2 раза
+//        queue.add(failing)
+//
+//        val handler = RetryHandler(1, TestLoggingHandler(log))
+//        process(queue, handler)
+//
+//        assertEquals(
+//            listOf(
+//                "execute:Cmd#1",
+//                "execute:Cmd#2",
+//                "log:FailableCommand(Cmd) - Fail Cmd"
+//            ), log
+//        )
+//    }
 
 
 

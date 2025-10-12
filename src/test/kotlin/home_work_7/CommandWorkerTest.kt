@@ -29,7 +29,7 @@ class CommandWorkerTest {
     }
 
     @Test
-    fun `start command should launch worker thread`() {
+    fun `проверить, что команда StartCommand действительно запускает поток.`() {
         val start = StartCommand(worker)
 
         start.execute()
@@ -40,7 +40,7 @@ class CommandWorkerTest {
     }
 
     @Test
-    fun `hard stop should immediately terminate worker thread`() {
+    fun `проверить, что HardStopCommand завершает поток немедленно.`() {
         val start = StartCommand(worker)
         start.execute()
         Thread.sleep(100)
@@ -53,7 +53,7 @@ class CommandWorkerTest {
     }
 
     @Test
-    fun `soft stop should wait until queue becomes empty`() {
+    fun `проверить, что SoftStopCommand завершает поток только после того, как все команды завершены.`() {
         val start = StartCommand(worker)
         start.execute()
 
@@ -77,7 +77,7 @@ class CommandWorkerTest {
     }
 
     @Test
-    fun `exceptions in command should not stop worker`() {
+    fun `проверить, что исключения внутри команды не останавливают поток.`() {
         val start = StartCommand(worker)
         start.execute()
 
